@@ -4,14 +4,13 @@ using System.Text;
 
 namespace LabTen
 {
-    class Validator
+    public class Validator
     {
-
         public string Input { get; set; }
 
         public Validator(string input)
         {
-            Input = input;               
+            Input = input;
         }
 
         public bool CheckIfDouble()
