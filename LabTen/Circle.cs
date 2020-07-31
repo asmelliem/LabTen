@@ -10,16 +10,13 @@ namespace LabTen
 
         public Circle(double radius)
         {
-            Radius = radius;
-                
+            Radius = radius;                
         }
 
         public double CalculateCircumference()
         {
             //C = 2(pi)r
-            var circumference = 2 * Math.PI * Radius;
-            return circumference;
-
+            return 2 * Math.PI * Radius;
         }
 
         public string CalculateFormattedCircumference()
@@ -30,9 +27,7 @@ namespace LabTen
         public double CalculateArea()
         {
             //Area = (pi)r^2
-            var area = (Math.PI) * Math.Pow(Radius, 2);
-            return area;
-
+            return (Math.PI) * Math.Pow(Radius, 2);            
         }
 
         public string CalculateFormattedArea()
@@ -42,8 +37,7 @@ namespace LabTen
 
         private string FormatNumber(double x)
         {
-            var formattedNumber = Math.Round((Double)x, 2);
-            return formattedNumber.ToString();
+            return Math.Round(x, 2).ToString();
         }
     }
 }
