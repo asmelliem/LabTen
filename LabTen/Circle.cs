@@ -6,7 +6,13 @@ namespace LabTen
 {
     public class Circle
     {
-        private double Radius { get; set; }
+        private double radius;
+
+        public double Radius
+        {
+            get { return radius; }
+            set { radius = value; }
+        }
 
         public Circle(double radius)
         {
