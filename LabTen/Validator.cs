@@ -4,23 +4,11 @@ using System.Text;
 
 namespace LabTen
 {
-    public class Validator
-    {
-        public string Input { get; set; }
-
-        public Validator(string input)
+    public static class Validator
+    {       
+        public static bool CheckIfDouble(string input, out double radius)
         {
-            Input = input;
-        }
-
-        public bool CheckIfDouble()
-        {
-            return Double.TryParse(Input, out var radius);
-        }
-
-        public double ConvertToDouble()
-        {
-            return Convert.ToDouble(Input);
+            return Double.TryParse(input, out radius);
         }
     }
 }

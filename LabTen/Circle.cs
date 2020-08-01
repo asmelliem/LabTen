@@ -10,13 +10,12 @@ namespace LabTen
 
         public double Radius
         {
-            get { return radius; }
-            set { radius = value; }
+            get { return radius; }            
         }
 
         public Circle(double radius)
         {
-            Radius = radius;                
+            this.radius = radius;                
         }
 
         public double CalculateCircumference()

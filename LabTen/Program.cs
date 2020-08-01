@@ -13,15 +13,13 @@ namespace LabTen
 
             do
             {
-
                 Console.WriteLine("Enter radius:");
 
                 var input = Console.ReadLine();
-                var validator = new Validator(input);
 
-                if (validator.CheckIfDouble())
+                if (Validator.CheckIfDouble(input, out var radius))
                 {
-                    var circle = new Circle(validator.ConvertToDouble());
+                    var circle = new Circle(radius);
                     circles.Add(circle);
 
                     Console.WriteLine($"Area: {circle.CalculateFormattedArea()}");
