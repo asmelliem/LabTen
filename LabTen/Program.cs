@@ -17,7 +17,7 @@ namespace LabTen
 
                 var input = Console.ReadLine();
 
-                if (Validator.CheckIfDouble(input, out var radius))
+                if (Validator.CheckIfDouble(input, out var radius) && Validator.CheckIfPositive(radius))
                 {
                     var circle = new Circle(radius);
                     circles.Add(circle);
