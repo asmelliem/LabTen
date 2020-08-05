@@ -24,15 +24,37 @@ namespace LabTen
 
                     Console.WriteLine($"Area: {circle.CalculateFormattedArea()}");
                     Console.WriteLine($"Circumference: {circle.CalculateFormattedCircumference()}");
-                    Console.WriteLine("Continue? (y/n)");
+                }               
+                else
+                {
+                    Console.WriteLine("Whoops, looks like there was something wrong with your input.");
+                }
+            } while (ContinueProgram());
+
+            Console.WriteLine($"Goodbye! You've created {circles.Count} Circle Object(s).");
+        }
+
+        public static bool ContinueProgram()
+        {           
+            while (true)
+            {
+                Console.WriteLine("Would you like to continue? (y/n)");
+                var input = Console.ReadLine().ToUpper();
+
+                if (input == "Y")
+                {
+                    return true;
+                }
+                else if (input == "N")
+                {
+                    return false;
                 }
                 else
                 {
-                    Console.WriteLine("Looks like there was something wrong with your input. Would you like to try again? (y/n)");
+                    Console.WriteLine("You didn't enter a 'Y' or 'N'");                    
                 }
-            } while (Console.ReadLine().ToUpper() == "Y");
-
-            Console.WriteLine($"Goodbye! You've created {circles.Count} Circle Object(s).");
+            };
+            
         }
     }
 }
